@@ -1,4 +1,4 @@
-//semáfaro carro
+j              //semáfaro carro
 
 int led1=18;
 int led2=5;
