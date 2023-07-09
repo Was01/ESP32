@@ -1,3 +1,5 @@
+#define led 5
+
 void setup()
 {
   pinMode(led,OUTPUT);
@@ -24,17 +26,17 @@ void loop()
     Serial.println(dados);
     Serial.flush();
     
-    if (dados.indexOf("L1") >= 0)
+    if (dados.indexOf("l1") >= 0)
     {
       Serial.println("Ligando LED");
       digitalWrite(led,HIGH);
     }
-    else if (dados.indexOf("D1") >= 0)
+    else if (dados.indexOf("d1") >= 0)
     {
       Serial.println("Desligando LED");
       digitalWrite(led,LOW);
     }
-    else if (dados.indexOf("I1") >= 0)
+    else if (dados.indexOf("i1") >= 0)
     {
       Serial.println("Invertendo LED");
       digitalWrite(led,!digitalRead(led));
