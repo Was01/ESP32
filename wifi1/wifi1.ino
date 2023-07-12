@@ -2,7 +2,7 @@
 #include <WiFi.h>
 
 const char* ssid="was"; //rede
-const char* password="*****";//senha
+const char* password="hawgl7lu";//senha
 
 void setup() {
  Serial.begin(115200);
