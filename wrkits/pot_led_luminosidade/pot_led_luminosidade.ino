@@ -8,7 +8,7 @@ int resolucao=8;
 
 void setup() {
   Serial.begin(115200);
-  pinMode(pino_sensor,OUTPUT);
+  pinMode(pino_sensor,INPUT);
   
   //Configuração para o funcionamento do PWM no LED
   ledcSetup(canal,frequencia,resolucao);
