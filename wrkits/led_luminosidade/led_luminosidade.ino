@@ -9,6 +9,7 @@ int resolucao=8;
 void setup() {
   Serial.begin(115200);
   //Configuração para o funcionamento do PWM no LED
+  pinMode(led,OUTPUT);
   ledcSetup(canal,frequencia,resolucao);
   
   //Associando a GPIO ao canal escolhido PWM
