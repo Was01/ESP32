@@ -16,7 +16,7 @@ void loop() {
   for(int i=0;i<256;i++)
   {
     ledcWrite(canal,i);
-    delay(15);
+    delay(30);
   }
 
    for(int i=255;i>=0;i--)
