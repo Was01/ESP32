@@ -14,6 +14,10 @@ void setup() {
 
 void loop() {
   lerbot=digitalRead(btn);
-  Serial.println(lerbot);
-  delay(500);
+  if(lerbot){
+    digitalWrite(led,HIGH);
+  }
+  else{
+    digitalWrite(led,LOW);
+  }
 }
