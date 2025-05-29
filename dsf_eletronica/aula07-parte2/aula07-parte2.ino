@@ -1,3 +1,4 @@
+
 #define led 15
 #define btn 4
 
@@ -19,6 +20,5 @@ void loop() {
     estado_btn=0;
     digitalWrite(led,!digitalRead(led));
   }
-  Serial.println(lerbot);
-  delay(100);
+  
 }
