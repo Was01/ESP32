@@ -6,7 +6,7 @@ int estado_btn;
 void setup() {
   Serial.begin(115200);
   pinMode(led,OUTPUT);
-  pinMode(btn,INPUT);
+   pinMode(btn,INPUT_PULLDOWN);
   digitalWrite(led,LOW);
 }
 
