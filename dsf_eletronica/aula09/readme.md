@@ -1,0 +1,1 @@
+## Entrada analógica
