@@ -1,1 +1,1 @@
-## Comunicação serail - Acionando um led via monitor serial
+## Comunicação serial - Acionando um led via monitor serial
