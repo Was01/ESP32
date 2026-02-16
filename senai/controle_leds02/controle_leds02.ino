@@ -6,37 +6,37 @@
 #define out2_time 800
 #define out3_time 400
 
-int out1_time_save=0,
-    out2_time_save=0,
-    out3_time_save=0;
+// Usamos 'unsigned long' para evitar que o código trave após 32 segundos
+unsigned long out1_time_save = 0;
+unsigned long out2_time_save = 0;
+unsigned long out3_time_save = 0;
 
 void setup() {
-  pinMode(out1,OUTPUT);
-  pinMode(out2,OUTPUT);
-  pinMode(out3,OUTPUT);
+  pinMode(out1, OUTPUT);
+  pinMode(out2, OUTPUT);
+  pinMode(out3, OUTPUT);
 
-  digitalWrite(out1,LOW);
-  digitalWrite(out2,LOW);
-  digitalWrite(out3,LOW);
-
+  digitalWrite(out1, LOW);
+  digitalWrite(out2, LOW);
+  digitalWrite(out3, LOW);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-if((millis()-out1_time_save)>=out1_time){
-    digitalWrite(out1,!digitalRead(out1));
-    out1_time_save=millis();
+  // Capturamos o tempo atual uma única vez no início do loop para maior precisão
+  unsigned long currentMillis = millis();
+
+  if (currentMillis - out1_time_save >= out1_time) {
+    digitalWrite(out1, !digitalRead(out1)); // Inverte o estado atual do pino
+    out1_time_save = currentMillis;
   }
   
-if((millis()-out2_time_save)>=out2_time){
-    digitalWrite(out2,!digitalRead(out2));
-    out2_time_save=millis();
+  if (currentMillis - out2_time_save >= out2_time) {
+    digitalWrite(out2, !digitalRead(out2));
+    out2_time_save = currentMillis;
   }
 
-if((millis()-out3_time_save)>=out3_time){
-    digitalWrite(out3,!digitalRead(out3));
-    out3_time_save=millis();
+  if (currentMillis - out3_time_save >= out3_time) {
+    digitalWrite(out3, !digitalRead(out3));
+    out3_time_save = currentMillis;
   }
-  
-  
 }
