@@ -13,7 +13,7 @@
 #define BLYNK_PRINT Serial
 
 # define  pot 34
-# define ledA 2
+
 
 
 #include <WiFi.h>
@@ -32,7 +32,7 @@ BLYNK_WRITE(V0)
 {
   // Set incoming value from pin V0 to a variable
   int value = param.asInt();
-  digitalWrite(ledA,value);
+  
   // Update state
   Blynk.virtualWrite(V1, value);
 }
