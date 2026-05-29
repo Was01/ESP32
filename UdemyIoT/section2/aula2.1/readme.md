@@ -1,1 +1,1 @@
-# Programando o esp32 para acessar a rede wifi (ip dinâmico)
+# Programando o esp32 para acessar a rede wifi 
