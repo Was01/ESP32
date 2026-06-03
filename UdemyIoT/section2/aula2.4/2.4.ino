@@ -1,7 +1,7 @@
 #include <WiFi.h>
 
-const char* SSID = "was"; //Nome da rede WI-FI que deseja se conectar
-const char* PASSWORD = "hawgl7lu"; //Senha da rede WI-FI que deseja se conectar
+const char* SSID = "***"; //Nome da rede WI-FI que deseja se conectar
+const char* PASSWORD = "****"; //Senha da rede WI-FI que deseja se conectar
 
 //Define o pino do led (D5)
 int pino_led = 15;
