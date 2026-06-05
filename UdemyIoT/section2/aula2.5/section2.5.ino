@@ -7,10 +7,10 @@ WiFiManager wifiManager;
 //Defino o pino d15
 int LED = 15;
 
-//Define o pino para reset das definicoes de wifi (D4)
+//Define o pino para reset das definicoes de wifi (D5)
 int pino_reset = 5;
 
-//Define o pino do led (D5)
+//Define o pino do led (D4)
 int pino_led = 4;
 
 //Defino a porta do servidor Web
