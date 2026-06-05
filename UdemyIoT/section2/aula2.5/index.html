@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle do LED</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e24;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #2a2a35;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            cursor: pointer; /* Adiciona a mãozinha do mouse */
+            border: none;
+        }
+
+        /* Botão Ligar */
+        .btn-ligar {
+            background-color: #2ec4b6;
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(46, 196, 182, 0.4);
+        }
+
+        .btn-ligar:hover {
+            background-color: #23968b;
+            transform: translateY(-2px);
+        }
+
+        .btn-ligar:active {
+            transform: translateY(1px);
+        }
+
+        /* Botão Desligar */
+        .btn-desligar {
+            background-color: #e71d36;
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(231, 29, 54, 0.4);
+        }
+
+        .btn-desligar:hover {
+            background-color: #b81427;
+            transform: translateY(-2px);
+        }
+
+        .btn-desligar:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Painel de Controle do LED</h1>
+        
+        <div class="btn-container">
+            <button onclick="enviarComando('http://192.168.15.50/1')" class="btn btn-ligar">Ligar</button>
+            <button onclick="enviarComando('http://192.168.15.50/0')" class="btn btn-desligar">Desligar</button>
+        </div>
+    </div>
+
+    <script>
+        // Esta função envia o link em segundo plano sem mexer na sua página
+        function enviarComando(url) {
+            fetch(url, { mode: 'no-cors' });
+        }
+    </script>
+
+</body>
+</html>
